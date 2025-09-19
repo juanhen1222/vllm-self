@@ -47,6 +47,10 @@ lora_filesystem_resolver = "vllm.plugins.lora_resolvers.filesystem_resolver:regi
 
 [tool.setuptools_scm]
 # no extra settings needed, presence enables setuptools-scm
+[tool.setuptools.package-data]
+"vllm" = [
+    "vllm/distributed/kv_transfer/kv_connector/v1/hf3fs/utils/hf3fs_utils.cpp",
+]
 
 [tool.setuptools.packages.find]
 where = ["."]
